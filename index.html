@@ -7,8 +7,17 @@
     <meta name='mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-capable' content='yes'>
 
+
+
     <!-- Valid until June 23, 2022-->
-    <meta http-equiv="origin-trial" content="AtHQISnXB5Y+0ffMLL3C/Zvf24IVI+s5kcP3wbueQbRvBKPpfHckADLzhuWAM4/K4aYBZQnSKIBAX4T8ZacOdQ4AAABOeyJvcmlnaW4iOiJodHRwczovL3RvamkuZ2l0aHViLmlvOjQ0MyIsImZlYXR1cmUiOiJXZWJHUFUiLCJleHBpcnkiOjE2NjM3MTgzOTl9">
+    <meta http-equiv="origin-trial" content="AvmggpQHT3vcFDcRsQHPTrLr8KzDFSgkvmBhFU4Ebl5dZ1QJB9VLMAP0ifYlQ3lFVX5OoElZ++ixx5g3BYuOkQgAAABkeyJvcmlnaW4iOiJodHRwczovL2NvbXBhbnktbmFtZWQuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJHUFUiLCJleHBpcnkiOjE2NzUyMDk1OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial" content="AvVUoeDms9FLQALhJEDHJ0DTazazmthC5b6Wf4Jdj30niRtWYy4qwsggDYw9VKjS5itWSmhTeeBRg8xeriwAvAMAAABJeyJvcmlnaW4iOiJodHRwczovL2xvY2FsaG9zdDo0NDMiLCJmZWF0dXJlIjoiV2ViR1BVIiwiZXhwaXJ5IjoxNjc1MjA5NTk5fQ==">
+
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
 
     <title>WebGPU Clustered Forward Shading</title>
 
@@ -105,7 +114,7 @@
         grid: 'grid',
       }).onChange(onLightPatternChange);*/
 
-      gui.add(appSettings, 'lightCount', 5, 1024).onFinishChange(() => {
+      gui.add(appSettings, 'lightCount', 5, 16000).onFinishChange(() => {
         if (renderer) {
           renderer.lightManager.lightCount = appSettings.lightCount;
         }
